@@ -3,7 +3,7 @@
 'use strict'
 console.log(__dirname);
 // Import parts of electron to use
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -35,8 +35,10 @@ function createWindow() {
     width: 1024, // width of the window
     height: 768, // height of the window
     show: false, // don't show until window is ready
+    // preload: 
     webPreferences: {
-      nodeIntegration: true
+      // nodeIntegration: true,
+      contextIsolation: true,
     }
   })
 
