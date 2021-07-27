@@ -37,8 +37,8 @@ function createWindow() {
     show: false, // don't show until window is ready
     // preload: 
     webPreferences: {
-      // nodeIntegration: true,
-      contextIsolation: true,
+      nodeIntegration: true,
+      // contextIsolation: true,
     }
   })
 
