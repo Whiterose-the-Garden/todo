@@ -34,7 +34,8 @@ module.exports = {
       }
     ]
   },
-  target: 'electron-renderer',
+  // prevents 'require not defined' error
+  target: 'web',
   plugins: [
     new HtmlWebpackPlugin(),
     new webpack.DefinePlugin({
